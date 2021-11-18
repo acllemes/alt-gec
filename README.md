@@ -20,5 +20,8 @@ Estar presente em todas as regiões do sul do Brasil, com qualidade e eficiênci
 
 ## Valores 
 
-Empreendedorismo; Sustentabilidade; Relação Transparente; Nosso Cliente; Equipe.
-
+Empreendedorismo
+Sustentabilidade
+Relação Transparente 
+Nosso Cliente
+Equipe

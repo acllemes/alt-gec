@@ -1,0 +1,38 @@
+#! / usr / bin / python3
+# _ * _ codificação: utf-8 _ * _
+
+importar  telnetlib
+do  pool de importação de multiprocessamento  
+ tempo de importação 
+classe  principal ():
+    def  __init__ ( self ):
+        equipamentos  = [{ 'ip' : '10 .1.1.1 ' , ' usuario ' : ' usuario1 ' , ' senha ' : ' senha1 ' }, \
+            { 'ip' : '10 .1.1.3 ' , ' usuario ' : ' usuario2 ' , ' senha ' : ' senha2 ' }]
+        
+        com  Pool ( 2 ) como  p :
+            p . mapa ( conexao_equipamento , equipamentos )
+
+classe  conexao_equipamento ():
+    def  __init__ ( self , dado ):
+        eu . ip  =  dado [ 'ip' ]
+        eu . usuario  =  dado [ 'usuario' ]
+        eu . senha  =  dado [ 'senha' ]
+        print ( "classe inicializada no IP: {}" . formato ( self . ip ))
+        tempo . dormir ( 2 )
+        eu . start_conn ()
+
+    
+    def  start_conn ( self ):
+        eu . tn  =  telnetlib . Telnet ()
+        eu . tn . aberto ( auto . ip , '23' , 100 )
+        eu . tn . read_until ( ':' . encode ())
+        eu . tn . write (( self . usuario + ' \ n ' ). encode ())
+        eu . tn . read_until ( b ':' )
+        eu . tn . escrever (( self . senha + ' \ n ' ). encode ())
+        saida  =  self . tn . read_until ( b '#' ). decodificar ()
+        tempo . dormir ( 1 )
+        imprimir ( saida )
+        
+
+if  __name__  ==  "__main__" :
+    principal ()

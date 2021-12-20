@@ -25,7 +25,3 @@ Estar presente em todas as regiões do sul do Brasil, com qualidade e eficiênci
 * Relação Transparente 
 * Nosso Cliente
 * Equipe
-
-# Documentação
-
-Em elaboração 
